@@ -7,7 +7,8 @@ def get_spotify_client():
     #loading the enivornment variables from .env
     load_dotenv()
 
-    scope = "user-top-read user-read-recently-played"
+    scope = "user-read-private user-top-read user-read-recently-played user-library-read"
+
 
     sp = spotipy.Spotify(
         auth_manager=SpotifyOAuth(
